@@ -1,4 +1,4 @@
-package com.example.trainbookingsystem.service;
+package com.example.trainbookingsystem;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -11,6 +11,8 @@ import com.example.trainbookingsystem.entity.Ticket;
 import com.example.trainbookingsystem.entity.Train;
 import com.example.trainbookingsystem.entity.User;
 import com.example.trainbookingsystem.repository.TicketRepository;
+import com.example.trainbookingsystem.service.UserService;
+import com.example.trainbookingsystem.service.TrainService;
 
 @Service
 public class TicketService {
