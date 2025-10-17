@@ -15,7 +15,7 @@ import com.example.trainbookingsystem.service.UserService;
 import com.example.trainbookingsystem.service.TrainService;
 
 @Service
-public class TicketService {
+public class TicketServiceTest{
 
     @Autowired
     private TicketRepository ticketRepository;
@@ -29,6 +29,7 @@ public class TicketService {
     public List<Ticket> getAllTickets() {
         return ticketRepository.findAll();
     }
+    
 
     public Optional<Ticket> getTicketById(Long id) {
         return ticketRepository.findById(id);
