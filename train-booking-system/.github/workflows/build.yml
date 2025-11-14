@@ -1,0 +1,31 @@
+name: Maven Build & SonarCloud
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: 'zulu'
+
+      - name: Build and analyze with Sonar
+        run: |
+          mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
+            -Dsonar.projectKey=Kavin-Prakash-T_SpringBootFullStack \
+            -Dsonar.organization=kavin-prakash-t \
+            -Dsonar.host.url=https://sonarcloud.io \
+            -Dsonar.token=${SONAR_TOKEN}
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
