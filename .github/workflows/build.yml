@@ -22,7 +22,7 @@ jobs:
 
       - name: Build and analyze
         run: |
-          cd train-booking
+          cd train-booking-system
           mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
             -Dsonar.projectKey=Kavin-Prakash-T_SpringBootFullStack \
             -Dsonar.organization=kavin-prakash-t \
