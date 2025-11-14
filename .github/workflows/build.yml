@@ -18,10 +18,11 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: 17
-          distribution: 'zulu'
+          distribution: zulu
 
-      - name: Build and analyze with Sonar
+      - name: Build and analyze
         run: |
+          cd train-booking
           mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
             -Dsonar.projectKey=Kavin-Prakash-T_SpringBootFullStack \
             -Dsonar.organization=kavin-prakash-t \
