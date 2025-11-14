@@ -28,10 +28,8 @@
 	</scm>
 	<properties>
 		<java.version>21</java.version>
-	</properties>
-	<properties>
-  <sonar.organization>kavin-prakash-t</sonar.organization>
-</properties>
+        <sonar.organization>kavin-prakash-t</sonar.organization>
+    </properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
